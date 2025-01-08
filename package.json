@@ -1,0 +1,27 @@
+{
+  "name": "motivatebot",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "set NODE_OPTIONS=--no-deprecation && nodemon index.js"
+  },
+  "keywords": [
+    "telegram",
+    "bot",
+    "node.js",
+    "telegram-bot",
+    "motivation",
+    "chatbot"
+  ],
+  "author": "Natalia Yarema",
+  "license": "ISC",
+  "description": "Telegram bot for motivation",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "grammy": "^1.34.0",
+    "nodemon": "^3.1.9",
+    "punycode": "^2.3.1"
+  }
+}
