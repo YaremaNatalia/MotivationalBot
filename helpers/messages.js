@@ -309,6 +309,12 @@ const moreMotivateButtonName = {
   esp: "💥 ¡Más motivación! 💥",
 };
 
+const messageReaction = {
+  ukr: "Не зовсім зрозумів. 🤔",
+  eng: "I don't quite get it. 🤔",
+  esp: "No acabo de entenderlo. 🤔",
+};
+
 const welcomeMessage = "Please choose your language:";
 const fireworks = "✨";
 
@@ -318,5 +324,6 @@ export default {
   greetings,
   motivateButtonName,
   moreMotivateButtonName,
+  messageReaction,
   fireworks,
 };

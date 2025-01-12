@@ -91,26 +91,16 @@ bot.on("callback_query:data", async (ctx) => {
   }
 });
 
-
 bot.on("message", async (ctx) => {
   try {
     const language = userLanguages[ctx.from.id];
-    const randomSticker = getRandomSticker();
-    if (randomSticker) {
-      try {
-        await ctx.replyWithSticker(randomSticker);
-      } catch (stickerError) {
-        console.error("Error sending sticker", stickerError);
-        await ctx.reply("👋😊");
-      }
-    } else {
-      await ctx.reply("👋😊");
-    }
     const keyboard = new InlineKeyboard()
       .text(messages.moreMotivateButtonName[language], `generate_${language}`)
       .row();
 
-    await ctx.reply("   🤔   ", { reply_markup: keyboard });
+    await ctx.reply(messages.messageReaction[language], {
+      reply_markup: keyboard,
+    });
   } catch (error) {
     console.error("Error processing message", error);
   }
